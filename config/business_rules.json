@@ -1,0 +1,25 @@
+{
+  "version": "2026-10-16",
+  "scope": "inquiry_translation_and_post_sale_documents",
+  "agent_provider": "replaceable_configured_locally",
+  "default_down_payment_percent": "30",
+  "payment_terms_source": "Deployment default; confirm payment terms for each business",
+  "historical_order_facts": [],
+  "controls": {
+    "invent_missing_fields": false,
+    "infer_sales_order_as_shipped": false,
+    "reuse_prior_customer_signature": false,
+    "omit_actual_shipment_from_external_documents": false
+  },
+  "source_currency": "CNY",
+  "document_currency": "USD",
+  "exchange_rate_policy": "manual_each_document_job_CNY_per_USD",
+  "usd_unit_price_decimals": 4,
+  "amount_decimals": 2,
+  "rounding": "ROUND_HALF_UP",
+  "total_policy": "sum_rounded_line_amounts",
+  "daily_workflow": [
+    "inquiry_translation",
+    "erp_import_manual_fx_document_export"
+  ]
+}
